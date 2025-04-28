@@ -207,6 +207,16 @@ function Form() {
                     )}
                 </div>
             </div>
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>&copy; 2025 Your Ghaith Kouki. All rights reserved.</p>
+                    <div class="footer-links">
+                    <a href="https://github.com/ghaithkouki" target="_blank">GitHub</a> |
+                    <a href="mailto:ghaithkouki0714@gmail.com">Email</a> |
+                    <a href="https://www.linkedin.com/in/ghaith-kouki-4010a3329" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }
