@@ -1,0 +1,206 @@
+.container{
+  display: flex;
+}
+h1{
+    font-family: 'Arial', sans-serif;
+    font-size: 4em;
+    color: #000000; 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.MatMix{
+  width: 50%;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.MatCC{
+  background-image: linear-gradient(to right, hsl(4, 97%, 62%), hsl(355, 100%, 67%));
+  border-radius: 0 15px 15px 0;
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.inputText{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  width: 300px;
+  background-color: rgba(37, 37, 37, 0.054);
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: black;
+}
+.inputTextcc{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: black;
+}
+.add{
+  background-color: white;
+  color: hsl(4, 97%, 62%);
+  padding: 10px 20px;
+  border: 2px solid hsl(4, 97%, 62%);
+  border-radius: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add:hover {
+    background-color: hsl(4, 97%, 62%);
+    color: white;
+}
+.card-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+.cards{
+  background-color: #fff;
+  border: 2px solid #ff0606;
+  border-radius: 8px;
+  width: 200px;
+  padding: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+.calc {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: hsl(4, 97%, 62%);
+  padding: 10px 20px;
+  border: 2px solid hsl(4, 97%, 62%);
+  border-radius: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calc:hover {
+  background-color: hsl(4, 97%, 62%);
+  color: white;
+}
+.delete {
+  background-color: white;
+  margin-left: 150px;
+  color: hsl(355, 100%, 67%);
+  padding: 8px 16px;
+  border: 2px solid hsl(355, 100%, 67%);
+  border-radius: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.delete:hover {
+  background-color: hsl(355, 100%, 67%);
+  color: white;
+}
+
+.Custom {
+  width: 50%;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px; /* Added padding */
+  gap: 20px; /* Added gap */
+}
+.inputTextCustom {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  width: 300px;
+  background-color: rgba(37, 37, 37, 0.054);
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .MatMix, .MatCC {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .MatCC {
+    border-radius: 15px;
+  }
+  .inputText, .inputTextcc {
+    width: 90%;
+  }
+  .add, .calc, .delete {
+    width: 90%;
+    margin: 10px 0;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    width: 90%;
+  }
+  .Custom {
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px; /* Added padding */
+    gap: 20px; /* Added gap */
+  }
+  .inputTextCustom {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+  .inputText, .inputTextcc {
+    height: 30px;
+    font-size: 14px;
+  }
+  .add, .calc, .delete {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .cards {
+    padding: 12px;
+  }
+  .inputTextCustom {
+    height: 30px;
+    font-size: 14px;
+  }
+}
