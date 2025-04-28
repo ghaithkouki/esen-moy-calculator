@@ -1,23 +1,35 @@
 export function validateInputs(nameMix, coefMix, exam, ds1, otherNote, custom) {
-  const nameMixRegex = /^[A-Za-z\s-_]+$/; // Updated regex to allow hyphens and underscores
-  const coefMixRegex = /^(?:[1-3](?:[.,]\d+)?)$/;
-  const scoreRegex = /^(?:[0-9]|[1-9]\d|20)(?:[.,]\d+)?$/; // Updated regex to accept commas
+  const nameMixRegex = /^[A-Za-z\s-_]+$/;
+  const coefMixRegex = /^(?:[1-5](?:[.,]\d+)?)$/;
+  const scoreRegex = /^(?:0*(?:\.\d+|\,\d+)?|0*[1-9](?:\.\d+|\,\d+)?|1\d(?:\.\d+|\,\d+)?|20(?:\.0+|\,0+)?)$/;
 
   if (!nameMixRegex.test(nameMix)) {
-    return { valid: false, message: "NameMix should contain only alphabetic characters, spaces, hyphens, and underscores." };
+    return { 
+      valid: false, 
+      message: "Le nom devrait contenir uniquement des caractères alphabétiques, espaces, tirets, et underscores." 
+    };
   }
 
   if (!coefMixRegex.test(coefMix)) {
-    return { valid: false, message: "CoefMix should be a numeric value between 1 and 3." };
+    return { 
+      valid: false, 
+      message: "Le coefficient devrait être une valeur numérique entre 1 et 5." 
+    };
   }
 
   if (!scoreRegex.test(exam) || !scoreRegex.test(ds1) || !scoreRegex.test(otherNote)) {
-    return { valid: false, message: "Exam, DS1, and OtherNote should be numeric values between 0 and 20." };
+    return { 
+      valid: false, 
+      message: "Les notes devraient être des valeurs numériques. Utilisez le point (.) ou la virgule (,) pour les décimales." 
+    };
   }
 
   if (custom && !scoreRegex.test(custom)) {
-    return { valid: false, message: "Moy should be a numeric value between 0 and 20." };
+    return { 
+      valid: false, 
+      message: "La moyenne devrait être une valeur numérique. Utilisez le point (.) ou la virgule (,) pour les décimales." 
+    };
   }
 
-  return { valid: true, message: "All inputs are valid." };
+  return { valid: true, message: "Toutes les entrées sont valides." };
 }

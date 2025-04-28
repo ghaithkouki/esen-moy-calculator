@@ -7,7 +7,7 @@ h1{
     color: #000000; 
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 .MatMix{
@@ -90,10 +90,6 @@ h1{
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
 }
 .calc {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: white;
   color: hsl(4, 97%, 62%);
   padding: 10px 20px;
@@ -103,6 +99,8 @@ h1{
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
+  align-self: flex-start; /* Align with the cards */
 }
 
 .calc:hover {
