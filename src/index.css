@@ -145,6 +145,39 @@ h1{
   margin-bottom: 20px;
   color: black;
 }
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #16a085;
+}
+
+.footer-links {
+  margin-top: 10px;
+  font-size: 16px;
+}
 
 @media (max-width: 768px) {
   .container {
@@ -174,11 +207,29 @@ h1{
   .Custom {
     width: 100%;
     border-radius: 15px;
-    padding: 20px; /* Added padding */
-    gap: 20px; /* Added gap */
+    padding: 20px; 
+    gap: 20px; 
   }
   .inputTextCustom {
     width: 90%;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+
+  .footer-links {
+    font-size: 14px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-links a::after {
+    content: none; 
   }
 }
 
@@ -200,5 +251,16 @@ h1{
   .inputTextCustom {
     height: 30px;
     font-size: 14px;
+  }
+  .footer {
+    padding: 15px 5px;
+  }
+
+  .footer p {
+    font-size: 10px;
+  }
+
+  .footer-links {
+    font-size: 12px;
   }
 }
